@@ -5,8 +5,6 @@ Simple jQuery menu slider
 
 Steps to use the Slider:
 
-Steps to use the Slider
-
 Wrap your navigation menu in a container as shown:
 
 <pre><code>
