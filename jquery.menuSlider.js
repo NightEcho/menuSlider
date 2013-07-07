@@ -38,32 +38,30 @@
         		     });
 
         //Move the Nav slider on hover
-		$("li", list).mouseenter(function() {
-			var pos = $(this).position();	
-			hoverItem = $(this);
-			$('.menuSlider').css ("left", pos.left);
+	$("li", list).mouseenter(function() {
+		var pos = $(this).position();	
+		hoverItem = $(this);
+		$('.menuSlider').css ("left", pos.left);
     	});
 
-		//Return the Nav slider on exit
-	    this.mouseleave(function() {
-			$('.menuSlider').css ("left", menuItemPosition.left);
-	    });
+	//Return the Nav slider on exit
+        this.mouseleave(function() {
+		$('.menuSlider').css ("left", menuItemPosition.left);
+	});
 
-	    $(window).resize (function() {
-			menuItemPosition = $("#selected").position();	
+	$(window).resize (function() {
+		menuItemPosition = $("#selected").position();	
 	        $(".menuSlider").css ({"width": $("#selected").width(),
-	        					   "height": $("#selected").height(),
-	        					   "left": menuItemPosition.left,
-	        					 });
-		});
-
-		this.click(function() {
-
-			var link = $("a", hoverItem).attr("href");
-			if (link !== undefined) document.location.href = link;
-
-		});
-
+	                 	       "height": $("#selected").height(),
+	        		       "left": menuItemPosition.left,
+	        		     });
+	});
+	
+	//Allows click through to links on IE
+	this.click(function() {
+		var link = $("a", hoverItem).attr("href");
+		if (link !== undefined) document.location.href = link;
+	});
     }
-
+    
 }(jQuery));
