@@ -32,4 +32,4 @@ Note: Ensure to include the JQuery library
 
 The item the slider returns to has an id of "selected". To switch which item is the current item, change which item has the selected id. I achieved it above by adding a click function in the script (Not included in download) because I wasn't linking to any pages.
 
-See Demo <a href="http://www.justenallan.com/menuSlider">Here</a>
+See Demo <a href="http://www.justenallan.com/menuslider">Here</a>
