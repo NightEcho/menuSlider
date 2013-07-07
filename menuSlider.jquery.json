@@ -6,7 +6,7 @@
         "name": "Justen Allan",
         "email": "justen.allan@gmail.com"
     },
-    "description": "A simple JQuery pul-in to create a slider on the navigation menu",
+    "description": "A simple JQuery plug-in to create a slider on the navigation menu",
     "repository": {
         "type": "git",
         "url": "https://github.com/NightEcho/menuSlider.git"
