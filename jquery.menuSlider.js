@@ -23,19 +23,19 @@
         this.append("<div class='menuSlider'></div>");
 
         $(".menuSlider").css ({"width": $("#selected").width(),
-        					   "height": $("#selected").height(),
-        					   "position": "absolute",
-        					   "left": menuItemPosition.left,
-        					   "top": "0",
-        					   "pointer-events": "none",
-        					   "cursor": "pointer",
-        					   "border-bottom": border.thickness + " " + border.borderStyle + " " + border.borderColor,
-				 		   "-webkit-transition": "left "+trans.speed+" "+trans.tStyle,
-						   "-moz-transition": "left "+trans.speed+" "+trans.tStyle,
-						   "-o-transition": "left "+trans.speed+" "+trans.tStyle,
-						   "transition": "left "+trans.speed+" "+trans.tStyle,
-						   "background-color": bgProps
-        					 });
+        		       "height": $("#selected").height(),
+        		       "position": "absolute",
+        		       "left": menuItemPosition.left,
+        		       "top": "0",
+        		       "pointer-events": "none",
+        		       "cursor": "pointer",
+        		       "border-bottom": border.thickness + " " + border.borderStyle + " " + border.borderColor,
+			       "-webkit-transition": "left "+trans.speed+" "+trans.tStyle,
+			       "-moz-transition": "left "+trans.speed+" "+trans.tStyle,
+			       "-o-transition": "left "+trans.speed+" "+trans.tStyle,
+			       "transition": "left "+trans.speed+" "+trans.tStyle,
+			       "background-color": bgProps
+        		     });
 
         //Move the Nav slider on hover
 		$("li", list).mouseenter(function() {
