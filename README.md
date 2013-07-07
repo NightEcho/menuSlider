@@ -18,7 +18,7 @@ Wrap your navigation menu in a container as shown:
 &#60;/div&#62;
 </code></pre>
 
-Call the menuSlider on the container ({borderthickness, borderstyle, bordercolor}, backgroundcolor, {tranistionspeed, transitiontype}):
+Call the menuSlider on the container ({borderthickness, borderstyle, bordercolor}, backgroundcolor, {transitionspeed, transitiontype}):
 
 <pre><code>
 &#60;script&#62;
