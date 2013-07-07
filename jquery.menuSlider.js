@@ -28,6 +28,7 @@
         		       "left": menuItemPosition.left,
         		       "top": "0",
         		       "pointer-events": "none",
+        		       "box-sizing": "border-box",
         		       "cursor": "pointer",
         		       "border-bottom": border.thickness + " " + border.borderStyle + " " + border.borderColor,
 			       "-webkit-transition": "left "+trans.speed+" "+trans.tStyle,
