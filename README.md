@@ -33,3 +33,5 @@ $("#slideContainer").menuSlider({thickness:"2px",borderStyle:"solid",borderColor
 Note: Ensure to include the JQuery library
 
 The item the slider returns to has an id of "selected". To switch which item is the current item, change which item has the selected id. I achieved it above by adding a click function in the script (Not included in download) because I wasn't linking to any pages.
+
+See Demo <a href="www.justenallan.com/menuSlider">Here</a>
