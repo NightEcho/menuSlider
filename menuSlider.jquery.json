@@ -1,19 +1,17 @@
 {
-  "name": "menu slider",
-  "version": "0.1",
-  "author": "Justen Allan <justen.allan@gmail.com>",
-  "description": "A simple JQuery pul-in to create a slider on the navigation menu",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/NightEcho/menuSlider.git"
-  },
-  "keywords": [
-    "jquery",
-    "menu slider"
-    "nav slider"
-  ],
-  "devDependencies": {
-    "jquery",
-  },  
-  "license": "MIT"
+    "name": "menu slider",
+    "version": "0.1",
+    "author": "Justen Allan <justen.allan@gmail.com>",
+    "description": "A simple JQuery pul-in to create a slider on the navigation menu",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/NightEcho/menuSlider.git"
+    },
+    "keywords": [
+        "jquery",
+        "menu slider",
+        "nav slider"
+    ],
+    "devDependencies": "jquery",
+    "license": "MIT"
 }
