@@ -2,8 +2,6 @@
 
     $.fn.menuSlider = function(borderProps,bgProps,tProps) {
 
-      var speed = ".4s";
-
         var border = $.extend({
             thickness    : "1px",
             borderStyle  : "solid",
@@ -32,11 +30,11 @@
         					   "pointer-events": "none",
         					   "cursor": "pointer",
         					   "border-bottom": border.thickness + " " + border.borderStyle + " " + border.borderColor,
-							   "-webkit-transition": "left "+trans.speed+" "+trans.tStyle,
-							   "-moz-transition": "left "+trans.speed+" "+trans.tStyle,
-							   "-o-transition": "left "+trans.speed+" "+trans.tStyle,
-							   "transition": "left "+trans.speed+" "+trans.tStyle,
-							   "background-color": bgProps
+				 		   "-webkit-transition": "left "+trans.speed+" "+trans.tStyle,
+						   "-moz-transition": "left "+trans.speed+" "+trans.tStyle,
+						   "-o-transition": "left "+trans.speed+" "+trans.tStyle,
+						   "transition": "left "+trans.speed+" "+trans.tStyle,
+						   "background-color": bgProps
         					 });
 
         //Move the Nav slider on hover
@@ -62,7 +60,6 @@
 		this.click(function() {
 
 			var link = $("a", hoverItem).attr("href");
-
 			if (link !== undefined) document.location.href = link;
 
 		});
