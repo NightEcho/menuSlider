@@ -24,7 +24,7 @@ Call the menuSlider on the container ({Border Thickness, Border Style, Border Co
 &#60;script&#62;
 $("#slideContainer").menuSlider({thickness:"2px",borderStyle:"solid",borderColor:"blue",borderSides:"border-bottom", 
 				 bgColor:"rgba(0,0,150,0.4)", bgRadius:"10px", 
-				 speed:".4s", tStyle:"linear"});
+				 speed:.4, tStyle:"linear"});
 &#60;/script&#62;
 </code></pre>				
 
