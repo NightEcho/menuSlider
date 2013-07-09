@@ -65,7 +65,7 @@
                             "height": $(".selectedMenuItem", list).height()
             });
             if (cssTransitionsSupported) $(slider).css ("left", menuItemPosition.left);
-            else $(slider).animate({left:menuItemPosition.left}, properties.speed*1000);
+            else $(slider).animate({left:menuItemPosition.left}, 50);
         });
 
         this.click(function() {
