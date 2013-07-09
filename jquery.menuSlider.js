@@ -5,7 +5,8 @@
         var border = $.extend({
             thickness    : "1px",
             borderStyle  : "solid",
-            borderColor  : "black"
+            borderColor  : "black",
+            borderSides  : "border-bottom"
         }, borderProps);
 
         var bgProps = $.extend({
@@ -26,6 +27,8 @@
         this.append("<div class='menuSlider'></div>");
         var slider = $(".menuSlider", this);
 
+        $(slider).css(border.borderSides, border.thickness + " " + border.borderStyle + " " + border.borderColor);
+
         $(slider).css ({"width": $(".selectedMenuItem", list).width(),
                         "height": $(".selectedMenuItem", list).height(),
                         "position": "absolute",
@@ -34,7 +37,6 @@
                         "pointer-events": "none",
                         "box-sizing": "border-box",
                         "cursor": "pointer",
-                        "border-bottom": border.thickness + " " + border.borderStyle + " " + border.borderColor,
                         "-webkit-transition": "left "+trans.speed+" "+trans.tStyle,
                         "-moz-transition": "left "+trans.speed+" "+trans.tStyle,
                         "-o-transition": "left "+trans.speed+" "+trans.tStyle,
