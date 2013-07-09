@@ -18,11 +18,11 @@ Wrap your navigation menu in a container as shown:
 &#60;/div&#62;
 </code></pre>
 
-Call the menuSlider on the container ({borderthickness, borderstyle, bordercolor}, {backgroundcolor, backgroundborderradius}, {transitionspeed, transitiontype}):
+Call the menuSlider on the container ({borderthickness, borderstyle, bordercolor, sidesofborder}, {backgroundcolor, backgroundborderradius}, {transitionspeed, transitiontype}):
 
 <pre><code>
 &#60;script&#62;
-$("#slideContainer").menuSlider({thickness:"2px",borderStyle:"solid",borderColor:"blue"}, 
+$("#slideContainer").menuSlider({thickness:"2px",borderStyle:"solid",borderColor:"blue",borderSides:"border-bottom"}, 
 				{bgColor:"rgba(0,0,150,0.4)", bgRadius:"10px"}, 
 				{speed:".4s", tStyle:"linear"});
 &#60;/script&#62;
