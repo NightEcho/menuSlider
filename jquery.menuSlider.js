@@ -1,23 +1,17 @@
 (function($) {
 
-    $.fn.menuSlider = function(borderProps,bgProps,tProps) {
+    $.fn.menuSlider = function(sliderProps) {
 
-        var border = $.extend({
+        var properties = $.extend({
             thickness    : "1px",
             borderStyle  : "solid",
             borderColor  : "black",
-            borderSides  : "border-bottom"
-        }, borderProps);
-
-        var bgProps = $.extend({
+            borderSides  : "border-bottom",
             bgColor      : null,
-            bgRadius     : null
-        }, bgProps);
-
-        var trans = $.extend({
+            bgRadius     : null,
             speed        : ".4s",
             tStyle       : "ease"
-        }, tProps);
+        }, sliderProps);
 
         var list = $("ul", this);
         var hoverItem;
@@ -27,7 +21,7 @@
         this.append("<div class='menuSlider'></div>");
         var slider = $(".menuSlider", this);
 
-        $(slider).css(border.borderSides, border.thickness + " " + border.borderStyle + " " + border.borderColor);
+        $(slider).css(properties.borderSides, properties.thickness + " " + properties.borderStyle + " " + properties.borderColor);
 
         $(slider).css ({"width": $(".selectedMenuItem", list).width(),
                         "height": $(".selectedMenuItem", list).height(),
@@ -37,12 +31,12 @@
                         "pointer-events": "none",
                         "box-sizing": "border-box",
                         "cursor": "pointer",
-                        "-webkit-transition": "left "+trans.speed+" "+trans.tStyle,
-                        "-moz-transition": "left "+trans.speed+" "+trans.tStyle,
-                        "-o-transition": "left "+trans.speed+" "+trans.tStyle,
-                        "transition": "left "+trans.speed+" "+trans.tStyle,
-                        "background-color": bgProps.bgColor,
-                        "border-radius": bgProps.bgRadius
+                        "-webkit-transition": "left "+properties.speed+" "+properties.tStyle,
+                        "-moz-transition": "left "+properties.speed+" "+properties.tStyle,
+                        "-o-transition": "left "+properties.speed+" "+properties.tStyle,
+                        "transition": "left "+properties.speed+" "+properties.tStyle,
+                        "background-color": properties.bgColor,
+                        "border-radius": properties.bgRadius
         });
 
         //Move the Nav slider on hover
