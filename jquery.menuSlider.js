@@ -57,18 +57,15 @@
 
         $(window).resize (function() {
             menuItemPosition = $(".selectedMenuItem", list).position(); 
-            $(slider).css ({"width": $("#selected").width(),
-                            "height": $("#selected").height(),
+            $(slider).css ({"width": $(".selectedMenuItem", list).width(),
+                            "height": $(".selectedMenuItem", list).height(),
                             "left": menuItemPosition.left,
             });
         });
 
         this.click(function() {
-
             var link = $("a", hoverItem).attr("href");
-
             if (link !== undefined) document.location.href = link;
-
         });
 
     }
