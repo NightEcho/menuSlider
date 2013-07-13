@@ -37,10 +37,18 @@
                         "pointer-events": "none",
                         "box-sizing": "border-box",
                         "cursor": "pointer",
-                        "-webkit-transition": "left "+properties.speed+"s "+properties.tStyle,
-                        "-moz-transition": "left "+properties.speed+"s "+properties.tStyle,
-                        "-o-transition": "left "+properties.speed+"s "+properties.tStyle,
-                        "transition": "left "+properties.speed+"s "+properties.tStyle,
+                        "-webkit-transition": "left "+properties.speed+"s "+properties.tStyle+
+                                              ",width "+properties.speed+"s "+properties.tStyle+
+                                              ",height "+properties.speed+"s "+properties.tStyle,
+                        "-moz-transition": "left "+properties.speed+"s "+properties.tStyle+
+                                           ",width "+properties.speed+"s "+properties.tStyle+
+                                           ",height "+properties.speed+"s "+properties.tStyle,
+                        "-o-transition": "left "+properties.speed+"s "+properties.tStyle+
+                                         ",width "+properties.speed+"s "+properties.tStyle+
+                                         ",height "+properties.speed+"s "+properties.tStyle,
+                        "transition": "left "+properties.speed+"s "+properties.tStyle+
+                                      ",width "+properties.speed+"s "+properties.tStyle+
+                                      ",height "+properties.speed+"s "+properties.tStyle,
                         "background-color": properties.bgColor,
                         "border-radius": properties.bgRadius
         });
@@ -49,14 +57,36 @@
         $("li", list).mouseenter(function() {
             var pos = $(this).position();   
             hoverItem = $(this);
-            if (cssTransitionsSupported) $(slider).css ("left", pos.left);
-            else $(slider).animate({left:pos.left}, properties.speed*1000);
+            if (cssTransitionsSupported) {
+                $(slider).css ({"width": $(this).width(),
+                                "height": $(this).height(),
+                                "left": pos.left
+                });
+            }
+            else {
+                $(slider).stop();
+                $(slider).animate({width: $(this).width(),
+                                   height: $(this).height(),
+                                   left: pos.left
+                }, properties.speed*1000);
+            }
         });
 
         //Return the Nav slider on exit
         this.mouseleave(function() {
-            if (cssTransitionsSupported) $(slider).css ("left", menuItemPosition.left);
-            else $(slider).animate({left:menuItemPosition.left}, properties.speed*1000);
+            if (cssTransitionsSupported) {
+                $(slider).css ({"width": $(".selectedMenuItem", list).width(),
+                                "height": $(".selectedMenuItem", list).height(),
+                                "left": menuItemPosition.left
+                });
+            }
+            else {
+                $(slider).stop();
+                $(slider).animate({width: $(".selectedMenuItem", list).width(),
+                                   height: $(".selectedMenuItem", list).height(),
+                                   left: menuItemPosition.left
+                }, properties.speed*1000);
+            }
         });
 
         $(window).resize (function() {
@@ -71,8 +101,7 @@
         this.click(function() {
             var link = $("a", hoverItem).attr("href");
             if (link !== undefined) document.location.href = link;
+
         });
-
     }
-
 }(jQuery));
